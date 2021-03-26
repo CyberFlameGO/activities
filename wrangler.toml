@@ -2,7 +2,7 @@ name = "activities-bot"
 type = "javascript"
 account_id = ""
 workers_dev = true
-route = ""
+route = "$CF_ACCOUNT_ID"
 zone_id = ""
 webpack_config = "webpack.config.js"
 
