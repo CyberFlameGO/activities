@@ -3,7 +3,7 @@ import { InteractionType, InteractionResponseType, APIInteractionResponse, RESTP
 import { APIPingInteraction } from 'discord-api-types/payloads/v9/_interactions/ping'
 
 export async function handleRequest(request: Request): Promise<Response> {
-  if (!request.headers.get('X-Signature-Ed25519') || !request.headers.get('X-Signature-Timestamp')) return Response.redirect('https://advaith.io')
+  if (!request.headers.get('X-Signature-Ed25519') || !request.headers.get('X-Signature-Timestamp')) return Response.redirect('https://cyberfla.me/')
   if (!await verify(request)) return new Response('', { status: 401 })
 
   const interaction = await request.json() as APIPingInteraction | APIApplicationCommandInteraction
@@ -17,7 +17,7 @@ export async function handleRequest(request: Request): Promise<Response> {
     return respond({
       type: InteractionResponseType.ChannelMessageWithSource,
       data: {
-        content: '[Click to add to your server](https://discord.com/api/oauth2/authorize?client_id=819778342818414632&scope=bot%20applications.commands)'
+        content: '[Click to add to your server](https://discord.com/api/oauth2/authorize?client_id=824868713630662676&scope=bot%20applications.commands)'
       }
     })
 
